@@ -1,0 +1,179 @@
+
+.botonRegresar{
+  color: #0b532e; 
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer; 
+}
+
+.botonRegresar:hover {
+  text-decoration: underline;
+}
+
+.regresarTexto {
+  margin-top: 5px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.passwordContainer {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.passwordContainer input {
+  flex: 1;
+  padding-right: 70px;
+}
+
+.passwordCambio {
+  position: absolute;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #E8F8E8;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 5px;
+  top:13%;
+}
+
+.passwordCambio:hover {
+  color: #005C37;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #E8F8E8;
+}
+
+.logoSeccion{
+  margin-bottom: 10px;
+}
+
+.logo {
+  width: 200px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #005C37;
+  margin-bottom: 30px; /* Reduce la separación si es necesario */
+}
+
+.loginForm {
+  width: 90%;
+  max-width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-top: 15px;
+}
+
+.loginForm label {
+  font-size: 14px;
+  color: #005C37;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-left: 5%;
+}
+
+.loginForm input {
+  padding: 10px;
+  border-radius: 30px;
+  border: 1px solid #96d09b;
+  background-color: #96d09b;
+}
+
+.olvidoPasswordLink {
+  font-size: 12px;
+  color: #0b532e;
+  text-align: left;
+  margin-left: 10px;
+  font-weight: 600;
+  margin-top: -5px;
+}
+
+.loginBoton {
+  padding: -5px;
+  border-radius: 30px;
+  border: none;
+  background-color: #0b532e;
+  color: #E8F8E8;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+  width: 97%;
+  height: 40px;
+  text-align: center;
+  margin: 10px auto;
+  margin-top: 20px;
+}
+
+.loginBoton:hover {
+  background-color: #0b532e;
+}
+
+.signupTexto{
+  margin-top: 5px;
+  font-size: 14px;
+  color: #0b532e;
+  font-weight: 600;
+}
+
+.signupLink {
+  color: #0b532e;
+  font-weight: bold;
+  text-decoration: none;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.signupLink:hover {
+  text-decoration: underline;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .loginForm {
+    width: 80%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .loginBoton {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .loginForm {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .logo {
+    width: 55vmin;
+  }
+
+  h1 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  .loginBoton{
+    font-size: 12px;
+  }
+}

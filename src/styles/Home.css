@@ -1,0 +1,359 @@
+.logoSeccion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 30%;
+}
+
+.logo {
+  width: 130px;
+  padding-top: 20px;
+  margin-right: 110px;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e6ffe8;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Contenedor principal */
+  .home-container {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #e6ffe8;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Encabezado */
+  .home-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #e6ffe8;
+  }
+  
+  .menu-button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
+  /* Contenido principal */
+  .home-main {
+    text-align: center;
+    flex-grow: 1;
+    padding: 2rem;
+  }
+  
+  /* Contenedor QR */
+  .qr-container video {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    object-fit:cover;
+  }
+  
+  .scan-button {
+    background-color: #3AA65A;
+    color: white;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    width: 90%;
+    max-width: 150px;
+    text-align: center;
+  }
+  
+  /* Instrucciones */
+  .instructions {
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+    color: #3AA65A;
+  }
+  
+  .instructions p {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+  }
+  
+  .instructions p::before {
+    content: "âœ…";
+    margin-right: 0.5rem;
+    color: #3AA65A;
+  }
+
+  .botonRegresar{
+    color: #0b532e; 
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer; 
+  }
+  
+  .botonRegresar:hover {
+    text-decoration: underline;
+  }
+  
+  /* Ventana emergente */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-content {
+  background-color: #e6ffe8;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  width: 80%;
+  max-width: 300px;
+}
+
+.modal-content button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.modal-content .allow-button {
+  background-color: #3AA65A;
+  color: white;
+}
+
+.modal-content .deny-button {
+  background-color: #a33b3c;
+  color: white;
+}
+
+/* Ventana emergente de Ã©xito */
+.success-popup {
+  background-color: #c6ebc6;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box; 
+  overflow: hidden; 
+}
+
+.success-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 1rem;
+  word-wrap: break-word;
+}
+
+.success-content {
+  font-size: 0.9rem;
+  color: #000000;
+  line-height: 1.5;
+  word-wrap: break-word; 
+}
+
+.close-button {
+  background-color: #3AA65A;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  width: 100%;
+  max-width: 150px;
+  text-align: center;
+}
+
+.success-popup {
+  background-color: #c6ebc6;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.success-popup.popup-appear {
+  animation: popup-appear 0.8s ease forwards;
+}
+
+@keyframes popup-appear {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 30%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -550px; /* Asegura que el menú esté completamente fuera de la pantalla */
+  width: 250px;
+  height: 100%;
+  background-color: #3AA65A;
+  color: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-family: 'Arial', sans-serif;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+/* Menú abierto */
+.side-menu.open {
+  left: -1; /* Se mueve al lugar visible */
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+/* Ícono de usuario */
+.user-icon {
+  margin-bottom: 1rem;
+  align-self: center; /* Mantén la imagen del usuario centrada */
+}
+
+.user-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Opciones del menú */
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.side-menu li {
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+  cursor: pointer;
+}
+
+.side-menu li:hover {
+  text-decoration: underline;
+}
+.side-menu a {
+  margin: 1rem 0;
+  font-size: 1rem;
+  text-align: left; /* Asegura que el texto esté alineado a la izquierda */
+  cursor: pointer;
+  color: white;
+}
+
+.side-menu a:hover {
+  text-decoration: underline;
+}
+
+/* Ícono del botón del menú (hamburguesa) */
+  .menu-button {
+  margin-left: 1rem; /* Agrega un margen izquierdo */
+  background-color: #3AA65A;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 1100;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-button.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Estilos para el menú hamburguesa cuando está abierto */
+.menu-button.open .menu-icon {
+  transform: rotate(45deg); /* Rota las líneas para formar una "X" */
+}
+
+.menu-button.open .menu-icon::before {
+  transform: rotate(-90deg); /* Gira la línea superior */
+  top: 0; /* Ajusta la posición */
+}
+
+.menu-button.open .menu-icon::after {
+  transform: rotate(-90deg); /* Gira la línea inferior */
+  top: 0; /* Ajusta la posición */
+}
+
+/* Ícono del botón del menú */
+.menu-icon {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  transition: transform 0.3s ease;
+}
+
+.menu-icon::before {
+  top: -3px;
+}
+
+.menu-icon::after {
+  top: 6px;
+}

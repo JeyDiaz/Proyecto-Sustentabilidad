@@ -1,0 +1,151 @@
+.botonRegresar{
+  color:#005C37;  
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 14px;
+  cursor: pointer; 
+}
+.botonRegresar:hover {
+  text-decoration: underline; 
+}
+.regresarTexto {
+  margin-top: -12px;
+  font-size: 14px;
+  text-align: center;
+}
+.signupContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:#e6ffe8;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: auto;
+}
+
+.logoSeccion {
+  text-align: center;
+}
+
+.logo {
+  width: 130px;
+  padding-top:20px ;
+}
+
+h1 {
+  font-size: 24px;
+  color:#005C37;
+  margin-bottom: 15px;
+}
+/*Campos del formulario*/
+.signupForm {
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+label {
+  font-size: 14px;
+  color: #005C37;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 2px;
+  margin-left:10px;
+}
+
+input,select {
+  padding: 5px;
+  margin-bottom: 15px;
+  font-size: 14px;
+  border-radius: 30px;
+  border: 1px solid #96d09b;
+  background-color: #96d09b;
+}
+select,option{
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color:#005C37;
+}
+
+.signupBoton {
+  background-color: #005C37;
+  color: #e6ffe8;
+  padding: 10px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 25%;
+  margin-top: 10px;
+  width: 50%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.signupBoton:hover {
+  background-color: #044c2b;
+}
+
+.loginTexto {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.loginLink {
+  color: #065d36;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.loginLink:hover {
+  text-decoration: underline;
+}
+/* Responsividad */
+@media (max-width: 768px) {
+  .signupContainer {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .signupBoton {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  label, input, select {
+    font-size: 12px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .signupContainer {
+    margin-top: 16%;
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  .signupBoton {
+    padding: 8px;
+    font-size: 14px;
+  }
+
+  input, select {
+    font-size: 12px;
+  }
+}
