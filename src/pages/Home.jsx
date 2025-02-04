@@ -5,6 +5,8 @@ import userIcon from "../assets/User_green.png";
 import qrImagen from "../assets/qrImangen.png";
 import "../styles/Home.css";
 
+
+
 const Home = () => {
   const [qrData, setQrData] = useState(null);
   const [showModal, setShowModal] = useState(true);
@@ -67,10 +69,7 @@ const Home = () => {
     <div className="home-container">
       {/* Header */}
       <header className="home-header">
-        <button
-          className={`menu-button ${isMenuOpen ? "hidden" : ""}`}
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
+        <button className="menu-button" onClick={() => setIsMenuOpen(!isMenuOpen)} style={{ color: '#0b532e' }}>
           ☰
         </button>
         <div className="logo-section">
@@ -85,7 +84,7 @@ const Home = () => {
           </div>
           <ul>
             <li><a href="/Home">Inicio</a></li>
-            <li>Perfil</li>
+            <li><a href="/Perfil">Perfil</a></li>
             <li>Horas</li>
             <li>Cerrar sesión</li>
           </ul>
@@ -114,14 +113,15 @@ const Home = () => {
             </button>
           )}
         </div>
-
+        <br></br><br></br><br></br>
         <div className="instructions">
           <p>Permite el acceso a tu cámara para escanear el código QR.</p>
+          
           <p>Revisa que los datos estén correctos.</p>
           {qrData && <p>Datos escaneados: {qrData}</p>}
         </div>
         <p className="regresarTexto">
-          <br></br>
+          <br></br><br></br>
           <a href="/Dashboard" className="botonRegresar"> ← Regresar</a>
         </p>
       </main>

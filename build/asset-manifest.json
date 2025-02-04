@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.d8c4fe82.css",
+    "main.js": "/static/js/main.b3e6edc6.js",
+    "static/media/logoSus.png": "/static/media/logoSus.844fb102228f06b8b8aa.png",
+    "static/media/logoSus1.png": "/static/media/logoSus1.b82db0a9b8c6745d1ce7.png",
+    "static/media/logoU.png": "/static/media/logoU.70e428ae48c551305714.png",
+    "static/media/User_green.png": "/static/media/User_green.5b89a91a0af129399a77.png",
+    "static/media/qrImangen.png": "/static/media/qrImangen.23fa4fdc787fabb5fe67.png",
+    "index.html": "/index.html",
+    "main.d8c4fe82.css.map": "/static/css/main.d8c4fe82.css.map",
+    "main.b3e6edc6.js.map": "/static/js/main.b3e6edc6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8c4fe82.css",
+    "static/js/main.b3e6edc6.js"
+  ]
+}

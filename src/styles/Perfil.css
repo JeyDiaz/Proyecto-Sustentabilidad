@@ -1,0 +1,227 @@
+/* Contenedor principal */
+.app-container {
+  display: flex;
+  min-height: 80vh;
+  flex-direction: column;
+  color: #065f46;
+}
+
+/* Barra lateral */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  background-color: #059669;
+  color: white;
+  height: 100vh;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.menu-icon {
+  font-size: 2rem;
+}
+
+.sidebar-menu {
+  padding-top: 50px;
+}
+
+.sidebar-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-menu li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  display: block;
+}
+
+.sidebar-menu li a:hover {
+  background-color: #047857;
+}
+
+/* Contenido principal */
+.main-content {
+  margin-left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #e6ffe8;
+}
+
+/* Elimina la barra verde y solo deja el logo */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.logo-image {
+  width: 100px;  /* Ajusta el tamaño del logo */
+  height: auto;
+}
+
+/* Perfil */
+.profile-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.profile-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-icon {
+  width: 80px;
+  height: 80px;
+  background-color: #d1fae5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.user-icon-image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #065f46;
+}
+
+.profile-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.field-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d1fae5;
+  padding-bottom: 0.75rem;
+}
+
+.field-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #065f46;
+}
+
+.field-value {
+  font-size: 1.125rem;
+  color: #047857;
+}
+
+.edit-input, .edit-select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.125rem;
+  color: #047857;
+  border: 2px solid #a7f3d0;
+  border-radius: 0.5rem;
+  background-color: rgba(236, 253, 245, 0.5);
+}
+
+.edit-input:focus, .edit-select:focus {
+  outline: none;
+  border-color: #34d399;
+}
+
+.button-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.action-button {
+  padding: 0.625rem 2rem;
+  background-color: #059669;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.action-button:hover {
+  background-color: #047857;
+}
+
+.action-button:active {
+  transform: scale(0.95);
+}
+
+/* Diseño responsive */
+@media (max-width: 768px) {
+  .app-container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    position: relative;
+    height: auto;
+  }
+
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .logo-container {
+    padding: 15px;
+  }
+
+  .profile-card {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .menu-button {
+    display: block;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+
+
