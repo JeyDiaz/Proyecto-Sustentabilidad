@@ -85,7 +85,7 @@ const Home = () => {
           <ul>
             <li><a href="/Home">Inicio</a></li>
             <li><a href="/Perfil">Perfil</a></li>
-            <li>Horas</li>
+            <li><a href="/Horas">Horas</a></li>
             <li>Cerrar sesión</li>
           </ul>
         </div>

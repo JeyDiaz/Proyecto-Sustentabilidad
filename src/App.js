@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import Home from './pages/Home'; 
 import Perfil from "./pages/Perfil";
+import Horas from './pages/Horas';
 
 // Validación global para evitar errores
 if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/home" element={<Home />} />
         <Route path="/perfil" element={<Perfil />} />
+        <Route path="/horas" element={<Horas />} />
       </Routes>
     </Router>
   );

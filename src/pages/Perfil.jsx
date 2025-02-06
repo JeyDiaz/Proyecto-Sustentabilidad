@@ -9,14 +9,14 @@ const Perfil = () => {
     apellidos: '',
     correo: '',
     matricula: '',
-    tipoBeca: ''
+    horas: ''
   });
 
   const [isEditing, setIsEditing] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    fetch('https://api.tuservidor.com/perfil') // Endpoint para obtener datos
+    fetch('https://api.tuservidor.com/perfil') 
       .then(response => response.json())
       .then(data => setProfile(data))
       .catch(error => console.error('Error obteniendo datos:', error));
@@ -73,9 +73,9 @@ const Perfil = () => {
           <img src={userIcon} alt="Usuario" className="user-image" />
         </div>
         <ul>
-          <li><a href="/Home">Inicio</a></li>
-          <li><a href="/Perfil">Perfil</a></li>
-          <li>Horas</li>
+            <li><a href="/Home">Inicio</a></li>
+            <li><a href="/Perfil">Perfil</a></li>
+            <li><a href="/Horas">Horas</a></li>
           <li>Cerrar sesión</li>
         </ul>
       </div>
